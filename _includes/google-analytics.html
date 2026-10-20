@@ -1,5 +1,5 @@
 <!-- Google Analytics -->
-{% if site.google-analytics %}
+{% if site.google-analytics and site.google-analytics.id and site.google-analytics.id != "" %}
 <script>
 var dnt = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
 if (dnt != "1" && dnt != "yes") {

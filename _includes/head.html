@@ -4,17 +4,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
   <meta name="theme-color" content="#0b0f19">
 
-  <title>{% if page.title %}{{ page.title }} | {{ site.username }}{% else %}{{ site.title }}{% endif %}</title>
-  <meta name="description" content="{% if page.description %}{{ page.description | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+  <title>{{ site.title }}</title>
+  <meta name="description" content="{{ site.description }}">
   <meta name="author" content="{{ site.username }}">
-  <link rel="canonical" href="{{ site.url }}{{ page.url }}">
+  <link rel="canonical" href="{{ site.url }}/">
 
   <!-- Social & Open Graph Meta Tags -->
   <meta property="og:site_name" content="{{ site.username }} Portfolio">
   <meta property="og:title" content="{{ site.username }} | Senior Performance Engineer @ Amex">
   <meta property="og:description" content="Performance Engineer with 10+ years scaling distributed systems to 6,000 TPS, building AI agents with LangGraph & driving chaos engineering.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="{{ site.url }}">
+  <meta property="og:url" content="{{ site.url }}/">
   <meta property="og:image" content="{{ site.url }}/assets/img/vivek_pic_circle.png">
 
   <!-- Twitter Meta Tags -->
@@ -26,12 +26,15 @@
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><linearGradient id='g' x1='0%' y1='0%' x2='100%' y2='100%'><stop offset='0%' stop-color='%2338bdf8'/><stop offset='100%' stop-color='%236366f1'/></linearGradient></defs><rect width='100' height='100' rx='24' fill='%230f172a'/><path d='M55 18 L28 54 L48 54 L42 82 L72 46 L52 46 Z' fill='url(%23g)'/></svg>">
 
+  <!-- Font Awesome 4.7 CDN Fallback -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
   <!-- Google Fonts Preconnect -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="{{ "/assets/css/main.css" | prepend: site.baseurl }}">
+  <link rel="stylesheet" href="/assets/css/main.css">
 
   <!-- Structured Data JSON-LD -->
   <script type="application/ld+json">

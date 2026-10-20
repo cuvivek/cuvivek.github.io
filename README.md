@@ -1,71 +1,57 @@
-# Particle Jekyll Theme
+# C U Vivek — Portfolio Website
 
-![](./particle.jpg)
+> Senior Performance Engineer at American Express | Scaling Distributed Systems (6,000 TPS) & Building Autonomous AI Performance Agents
 
-This is a simple and minimalist template for Jekyll designed for developers that want to show of their portfolio.
+Live portfolio: **[cuvivek.github.io](https://cuvivek.github.io)**
 
-The Theme features:
+---
 
-- Gulp
-- SASS
-- Sweet Scroll
-- Particle.js
-- BrowserSync
-- Font Awesome and Devicon icons
-- Google Analytics
-- Info Customization
+## Highlights
 
-## Basic Setup
+- **American Express Centurion Award 2025 Winner**: Top internal recognition for engineering excellence, system resiliency leadership, and high-impact delivery.
+- **AI Performance Agent (LangGraph & RAG)**: Autonomous agent built at Amex to execute tests, analyze run telemetry, and query historical defect patterns via conversational chat.
+- **High-Throughput Scalability**: Tuned and scaled American Express Payment Network Authorization systems to **6,000+ Transactions Per Second (TPS)**.
+- **Chaos Engineering & Toxiproxy**: Containerized Toxiproxy for latency injection, jitter, and network failure emulation to uncover distributed system resiliency gaps.
+- **Shift-Left CI/CD**: Automated performance quality gates within GitHub Actions pipelines.
 
-1. [Install Jekyll](http://jekyllrb.com)
-2. Clone the particle theme: `git clone https://github.com/nrandecker/particle.git`
-3. Edit `_config.yml` to personalize your site.
+---
 
-## Site and User Settings
+## Tech Stack
 
-You have to fill some informations on `_config.yml` to customize your site.
+- **Site Generator**: [Jekyll](https://jekyllrb.com/) (hosted on GitHub Pages)
+- **Styling**: SCSS (Custom dark-theme design tokens, CSS Grid & Flexbox)
+- **Asset Pipeline**: Gulp 4 (Dart Sass, Uglify, BrowserSync)
+- **Interactive UI**: Particles.js, SweetScroll
+- **Icons**: Font Awesome, Devicon
 
-```
-# Site settings
-description: A blog about lorem ipsum dolor sit amet
-baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://localhost:3000" # the base hostname & protocol for your site
+---
 
-# User settings
-username: Lorem Ipsum
-user_description: Anon Developer at Lorem Ipsum Dolor
-user_title: Anon Developer
-email: anon@anon.com
-twitter_username: lorem_ipsum
-github_username:  lorem_ipsum
-gplus_username:  lorem_ipsum
-```
+## Local Development
 
-**Don't forget to change your url before you deploy your site!**
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/cuvivek/cuvivek.github.io.git
+   cd cuvivek.github.io
+   ```
 
-## Color and Particle Customization
-- Color Customization
-  - Edit the sass variables
-- Particle Customization
-  - Edit the json data in particle function in app.js
-  - Refer to [Particle.js](https://github.com/VincentGarreau/particles.js/) for help
+2. **Install dependencies:**
+   ```bash
+   yarn install
+   ```
 
-## Running the blog in local
+3. **Compile assets:**
+   ```bash
+   npx gulp sass   # Compiles SCSS to assets/css/main.css
+   npx gulp js     # Minifies JS to assets/js/main.js
+   ```
 
-In order to compile the assets and run Jekyll on local you need to follow those steps:
+4. **Run development server:**
+   ```bash
+   npx gulp        # Watches for file changes and auto-reloads
+   ```
 
-- Install [NodeJS](https://nodejs.org/)
-- Install [Jekyll](https://jekyllrb.com): `sudo gem install bundler jekyll`
-- Install [Yarn](https://yarnpkg.com/): `npm install -g yarn`
-- Install dependencies: `yarn`
-- Run: `gulp`
+---
 
 ## License
 
-This theme is free and open source software, distributed under the The MIT License. So feel free to use this Jekyll theme anyway you want.
-
-## Credits
-
-This theme was partially designed with the inspiration from these fine folks
-- [Willian Justen](https://github.com/willianjusten/will-jekyll-template)
-- [Vincent Garreau](https://github.com/VincentGarreau/particles.js/)
+MIT License. Designed and maintained by [C U Vivek](https://github.com/cuvivek).

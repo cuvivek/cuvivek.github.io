@@ -1,118 +1,93 @@
-/* sweetScroll load */
+/* Modernized Particle & Scroll Initialization */
 document.addEventListener("DOMContentLoaded", function () {
-  new SweetScroll({/* some options */});
+  if (typeof SweetScroll !== 'undefined') {
+    new SweetScroll({
+      trigger: "[data-scroll]",
+      duration: 800,
+      easing: "easeInOutQuart"
+    });
+  }
 
-  /* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
-  particlesJS('particles-js', {
-    "particles": {
-      "number": {
-        "value": 30,
-        "density": {
-          "enable": true,
-          "value_area": 800
-        }
-      },
-      "color": {
-        "value": "#ffffff"
-      },
-      "shape": {
-        "type": "polygon",
-        "stroke": {
-          "width": 0,
-          "color": "#000000"
-        },
-        "polygon": {
-          "nb_sides": 5
-        },
-        "image": {
-          "src": "img/github.svg",
-          "width": 100,
-          "height": 100
-        }
-      },
-      "opacity": {
-        "value": 0.5,
-        "random": false,
-        "anim": {
-          "enable": false,
-          "speed": 1,
-          "opacity_min": 0.1,
-          "sync": false
-        }
-      },
-      "size": {
-        "value": 3,
-        "random": true,
-        "anim": {
-          "enable": false,
-          "speed": 19.18081918081918,
-          "size_min": 0.1,
-          "sync": false
-        }
-      },
-      "line_linked": {
-        "enable": true,
-        "distance": 150,
-        "color": "#ffffff",
-        "opacity": 0.4,
-        "width": 1
-      },
-      "move": {
-        "enable": true,
-        "speed": 4,
-        "direction": "none",
-        "random": true,
-        "straight": false,
-        "out_mode": "out",
-        "bounce": false,
-        "attract": {
-          "enable": false,
-          "rotateX": 600,
-          "rotateY": 1200
-        }
-      },
-      nb: 80
-    },
-    "interactivity": {
-      "detect_on": "canvas",
-      "events": {
-        "onhover": {
-          "enable": false,
-          "mode": "grab"
-        },
-        "onclick": {
-          "enable": true,
-          "mode": "push"
-        },
-        "resize": true
-      },
-      "modes": {
-        "grab": {
-          "distance": 400,
-          "line_linked": {
-            "opacity": 1
+  if (typeof particlesJS !== 'undefined') {
+    particlesJS('particles-js', {
+      "particles": {
+        "number": {
+          "value": 45,
+          "density": {
+            "enable": true,
+            "value_area": 900
           }
         },
-        "bubble": {
-          "distance": 400,
-          "size": 40,
-          "duration": 2,
-          "opacity": 8,
-          "speed": 3
+        "color": {
+          "value": ["#38bdf8", "#818cf8", "#60a5fa", "#ffffff"]
         },
-        "repulse": {
-          "distance": 200,
-          "duration": 0.4
+        "shape": {
+          "type": "circle",
+          "stroke": {
+            "width": 0,
+            "color": "#000000"
+          }
         },
-        "push": {
-          "particles_nb": 4
+        "opacity": {
+          "value": 0.35,
+          "random": true,
+          "anim": {
+            "enable": true,
+            "speed": 0.8,
+            "opacity_min": 0.15,
+            "sync": false
+          }
         },
-        "remove": {
-          "particles_nb": 2
+        "size": {
+          "value": 3,
+          "random": true,
+          "anim": {
+            "enable": false
+          }
+        },
+        "line_linked": {
+          "enable": true,
+          "distance": 140,
+          "color": "#38bdf8",
+          "opacity": 0.2,
+          "width": 1
+        },
+        "move": {
+          "enable": true,
+          "speed": 1.6,
+          "direction": "none",
+          "random": true,
+          "straight": false,
+          "out_mode": "out",
+          "bounce": false
         }
-      }
-    },
-    "retina_detect": true
-  });
-
+      },
+      "interactivity": {
+        "detect_on": "canvas",
+        "events": {
+          "onhover": {
+            "enable": true,
+            "mode": "grab"
+          },
+          "onclick": {
+            "enable": true,
+            "mode": "push"
+          },
+          "resize": true
+        },
+        "modes": {
+          "grab": {
+            "distance": 180,
+            "line_linked": {
+              "opacity": 0.45
+            }
+          },
+          "push": {
+            "particles_nb": 3
+          }
+        }
+      },
+      "retina_detect": true
+    });
+  }
 }, false);

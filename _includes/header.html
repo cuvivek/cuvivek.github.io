@@ -1,22 +1,64 @@
 <div id="particles-js">
+  <nav class="top-nav">
+    <div class="nav-container">
+      <a href="#" class="nav-logo">{{ site.username }} <span class="logo-dot">.</span></a>
+      <div class="nav-links">
+        <a class="nav-link" href="#about" data-scroll>About & Skills</a>
+        <a class="nav-link" href="#experience" data-scroll>Experience</a>
+        <a class="nav-link" href="#credentials" data-scroll>Honors & Certs</a>
+        <a class="nav-link nav-btn" href="/assets/c.u.vivek_resume.pdf" target="_blank"><i class="fa fa-file-pdf-o"></i> Resume</a>
+      </div>
+    </div>
+  </nav>
+
   <div class="header">
-      <h1>
-        <img alt="vivek" src="/assets/img/vivek_pic_circle.png" style="height:3em;width:3em;vertical-align:middle;" /><br><br>
-        <span class="site-title">{{site.username}}</span>
-        <span class="site-description">{{site.user_title}}</span>
-      </h1>
-      <div class="header-icons">
-        <a aria-label="Send email" href="mailto:vivekcu81@gmail.com"><i class="icon fa fa-envelope"></i></a>
-        <!-- <a aria-label="My Twitter" target="_blank" href="#"><i class="icon fa fa-twitter" aria-hidden="true"></i></a> -->
-        <!-- <a aria-label="My Google Plus" target="_blank" href="#"><i class="icon fa fa-google-plus" aria-hidden="true"></i></a> -->
-        <a aria-label="My Resume" target="_blank" href="/assets/c.u.vivek_resume.pdf"><i class="icon fa fa-file-pdf-o" aria-hidden="true"></i></a>
-        <a aria-label="My LinkedIn" target="_blank" href="https://www.linkedin.com/in/vivekcu"><i class="icon fa fa-linkedin" aria-hidden="true"></i></a>
-        <a aria-label="My Github" target="_blank" href="https://github.com/cuvivek"><i class="icon fa fa-github-alt" aria-hidden="true"></i></a>
-      </div>
-      <div class="header-links">
-        <a class="link" href="#about" data-scroll>About Me</a>
-        <a class="link" href="#projects" data-scroll>Experience</a>
-      </div>
+    <div class="hero-badge-container">
+      <span class="hero-award-badge">
+        <i class="fa fa-trophy award-icon"></i> Centurion Award Winner 2025 · American Express
+      </span>
+    </div>
+
+    <div class="avatar-wrapper">
+      <img alt="C U Vivek" src="{{ "/assets/img/vivek_pic_circle.png" | prepend: site.baseurl }}" class="hero-avatar" />
+      <span class="status-indicator" title="Senior Performance Engineer @ Amex"></span>
+    </div>
+
+    <h1 class="hero-title">
+      <span class="site-title">{{ site.username }}</span>
+      <span class="site-role">{{ site.user_title }} · <span class="highlight-company">{{ site.user_company }}</span></span>
+    </h1>
+
+    <p class="hero-tagline">
+      Scaling Mission-Critical Distributed Systems to <span class="stat-highlight">6,000+ TPS</span> &amp; Building Autonomous <span class="ai-highlight">AI Performance Agents</span> with LangGraph &amp; RAG
+    </p>
+
+    <div class="hero-cta-group">
+      <a class="btn btn-primary" href="/assets/c.u.vivek_resume.pdf" target="_blank">
+        <i class="fa fa-download"></i> Download Resume
+      </a>
+      <a class="btn btn-secondary" href="#experience" data-scroll>
+        <i class="fa fa-briefcase"></i> View Experience
+      </a>
+      <a class="btn btn-tertiary" href="#ai-agent" data-scroll>
+        <i class="fa fa-magic"></i> AI Agent Work
+      </a>
+    </div>
+
+    <div class="header-icons">
+      <a aria-label="LinkedIn" target="_blank" rel="noopener noreferrer" href="{{ site.linkedin_url }}" title="LinkedIn Profile">
+        <i class="icon fa fa-linkedin"></i>
+      </a>
+      <a aria-label="GitHub" target="_blank" rel="noopener noreferrer" href="https://github.com/{{ site.github_username }}" title="GitHub Profile">
+        <i class="icon fa fa-github-alt"></i>
+      </a>
+      <a aria-label="Send Email" href="mailto:{{ site.email }}" title="Email Vivek">
+        <i class="icon fa fa-envelope"></i>
+      </a>
+    </div>
   </div>
-  <a class="down" href="#about" data-scroll><i class="icon fa fa-chevron-down" aria-hidden="true"></i></a>
+
+  <a class="down" href="#metrics" data-scroll aria-label="Scroll to content">
+    <i class="icon fa fa-chevron-down" aria-hidden="true"></i>
+  </a>
 </div>
+

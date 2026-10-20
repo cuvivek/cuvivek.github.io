@@ -1,20 +1,18 @@
 # Site settings
-title: cuvivek
-description: performance engineer
-#baseurl: "/blog" # the subpath of your site, e.g. /blog
-url: "https://cuvivek.github.io" # the base hostname & protocol for your site e.g. http://willianjusten.com.br
+title: "C U Vivek | Senior Performance Engineer"
+description: "Senior Performance Engineer with over 10 years of experience in Banking, Telecom, and Petroleum domains. Specializing in high-throughput distributed systems (6,000 TPS), Chaos Engineering, and AI Performance Agents using LangGraph."
+url: "https://cuvivek.github.io"
 
 # User settings
-username: C U Vivek
-user_description: Performance Engineer with over 9 years of experience in Banking, Telecom and Petroleum Domain. E2E Project Experience - Designing NFT Test Strategies, Execution and Analysing critical business requirements. Hands-on working experience on Microservice architecture, Kubernetes, Openshift, Kafka, Couchbase and AWS. Proficient with Profiling and Monitoring Tools like Dynatrace, JVisualVM, JConsole, Grafana and Prometheus. Experience in Performance Test Design for complex Workload Models, Execution, Monitoring, Identifying Bottlenecks and Performance tuning.
-user_title: Performance Engineer
-email: vivekcu81@gmail.com
-twitter_username: lorem_ipsum
-github_username:  cuvivek
-gplus_username:  lorem_ipsum
+username: "C U Vivek"
+user_title: "Senior Performance Engineer"
+user_company: "American Express"
+user_location: "Bengaluru, India"
+user_tagline: "Scaling Distributed Systems (6k TPS) & Engineering Autonomous AI Performance Agents"
+user_description: "Senior Performance Engineer with over 10 years of experience across Banking, Telecom, and Petroleum domains. Specialist in high-throughput architecture, microservices tuning, Kubernetes, OpenShift, Kafka, AWS, and Chaos Engineering. Builder of autonomous AI performance agents using LangGraph & RAG. Recipient of the American Express Centurion Award 2025."
+email: "vivekcu81@gmail.com"
+linkedin_url: "https://www.linkedin.com/in/vivekcu"
+github_username: "cuvivek"
 
-# Google-analytics
-google-analytics:
-  id: ""
+exclude: ['package.json', 'src', 'node_modules']
 
-exclude: ['package.json', 'src' , 'node_modules']

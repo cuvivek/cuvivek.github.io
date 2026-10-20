@@ -1,101 +1,307 @@
-#projects {
+// Work Experience Timeline
+.experience-timeline {
+  position: relative;
+  max-width: 950px;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  width: 90%;
-  max-width: 960px;
-  margin: 0 auto;
-  @media only screen and (min-width: $cut) {
-    width: 80%;
-  }
-}
+  gap: 2.25rem;
 
-.user-projects {
-  margin: 20px auto;
-  img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 5px;
-  }
-  h5 {
-    margin: 0;
-  }
-  li {
-    color: $main;
-    font-size: 1.1rem;
-  }
-  p {
-    margin-right: 5px;
-  }
-}
+  &::before {
+    content: '';
+    position: absolute;
+    top: 2rem;
+    bottom: 2rem;
+    left: 20px;
+    width: 2px;
+    background: linear-gradient(180deg, $accent-blue 0%, $accent-cyan 50%, rgba(255, 255, 255, 0.05) 100%);
+    display: none;
 
-.contents {
-  @media only screen and (min-width: $cut) {
-    margin-left: 0;
-    width: 48%;
-  }
-}
-
-.contents-right {
-  @media only screen and (min-width: $cut) {
-    float: right;
-    margin-top: -5%;
-    width: 48%;
-  }
-}
-.images-right {
-  @media only screen and (min-width: $cut) {
-    float: right;
-    width: 48%;
-  }
-  img {
-    @media only screen and (min-width: $cut) {
-      float: right;
+    @media (min-width: $tablet) {
+      display: block;
     }
   }
 }
 
-.images-left {
-  @media only screen and (min-width: $cut) {
-    float: left;
-    width: 48%;
-  }
-  img {
-    @media only screen and (min-width: $cut) {
-      float: left;
-    }
+.timeline-item {
+  position: relative;
+  display: flex;
+  gap: 1.75rem;
+
+  @media (max-width: $tablet - 1px) {
+    flex-direction: column;
   }
 }
 
-.project-link {
-  display: inline-block;
-  margin: 10px 0px;
-  padding: 5px;
-  color: $main;
-  background-color: transparent;
-  border: 1px solid $main;
-  border-radius: 10px;
-  text-align: center;
-  outline: none;
-  text-decoration: none;
-  cursor: pointer;
-  transition: color 0.3s ease-out,
-              background-color 0.3s ease-out,
-              border-color 0.3s ease-out;
+.timeline-marker {
+  display: none;
+  flex-shrink: 0;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: $bg-card;
+  border: 2px solid $accent-blue;
+  color: #60a5fa;
+  font-size: 1.1rem;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 15px rgba(59, 130, 246, 0.3);
+  z-index: 2;
+
+  @media (min-width: $tablet) {
+    display: flex;
+  }
+}
+
+.timeline-card {
+  flex: 1;
+  background: $bg-card;
+  border: 1px solid $border-color;
+  border-radius: 16px;
+  padding: 1.75rem;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+  transition: border-color 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease;
+
+  @media (min-width: $tablet) {
+    padding: 2.25rem;
+  }
+
   &:hover {
-    background-color: $purple;
-    border-color: $purple;
-    color: #fff;
-    transition: color 0.3s ease-in,
-                background-color 0.3s ease-in,
-                border-color 0.3s ease-in;
+    border-color: $border-light;
+    transform: translateY(-2px);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.35);
   }
-  &:active {
-    background-color: $purple;
-    border-color: $purple;
-    color: #fff;
-    transition: color 0.3s ease-in,
-                background-color 0.3s ease-in,
-                border-color 0.3s ease-in;
+}
+
+.timeline-featured {
+  .timeline-marker {
+    border-color: #38bdf8;
+    color: #38bdf8;
+    box-shadow: 0 0 20px rgba(56, 189, 248, 0.4);
+  }
+
+  .timeline-card {
+    border-color: rgba(56, 189, 248, 0.3);
+    background: linear-gradient(180deg, rgba(56, 189, 248, 0.03) 0%, $bg-card 100%);
+    box-shadow: 0 8px 30px rgba(56, 189, 248, 0.08);
+
+    &:hover {
+      border-color: rgba(56, 189, 248, 0.5);
+    }
+  }
+}
+
+// Company Header
+.timeline-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.25rem;
+  margin-bottom: 1.25rem;
+
+  @media (max-width: 540px) {
+    flex-direction: column;
+  }
+}
+
+.company-logo-wrapper {
+  width: 58px;
+  height: 58px;
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+
+  .company-logo {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+  }
+}
+
+.company-info {
+  flex-grow: 1;
+}
+
+.company-meta-top {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin-bottom: 0.25rem;
+}
+
+.company-name {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: $text-primary;
+  margin: 0;
+}
+
+.company-duration {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: $accent-cyan;
+  background: rgba(6, 182, 212, 0.1);
+  border: 1px solid rgba(6, 182, 212, 0.2);
+  padding: 0.2rem 0.65rem;
+  border-radius: 9999px;
+}
+
+.company-location {
+  font-size: 0.85rem;
+  color: $text-muted;
+  margin-bottom: 0.65rem;
+
+  i {
+    color: $text-muted;
+    margin-right: 0.25rem;
+  }
+}
+
+.role-badge {
+  display: inline-block;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: $text-light;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid $border-color;
+  padding: 0.3rem 0.75rem;
+  border-radius: 6px;
+}
+
+.role-progression {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.85rem;
+}
+
+.role-pill {
+  font-size: 0.8rem;
+  font-weight: 500;
+  padding: 0.25rem 0.6rem;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid $border-color;
+  color: $text-secondary;
+
+  &.current-role {
+    background: rgba(16, 185, 129, 0.12);
+    border-color: rgba(16, 185, 129, 0.35);
+    color: #6ee7b7;
+    font-weight: 600;
+  }
+}
+
+.role-arrow {
+  color: $text-muted;
+  font-size: 0.8rem;
+}
+
+// Callouts
+.featured-callouts {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  margin: 1rem 0 1.25rem;
+}
+
+.callout-pill {
+  padding: 0.65rem 1rem;
+  border-radius: 8px;
+  font-size: 0.88rem;
+  line-height: 1.5;
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+
+  i {
+    font-size: 1rem;
+    flex-shrink: 0;
+  }
+
+  &.callout-gold {
+    background: rgba(245, 158, 11, 0.1);
+    border: 1px solid rgba(245, 158, 11, 0.25);
+    color: #fde68a;
+
+    i {
+      color: #f59e0b;
+    }
+  }
+
+  &.callout-cyan {
+    background: rgba(6, 182, 212, 0.1);
+    border: 1px solid rgba(6, 182, 212, 0.25);
+    color: #a5f3fc;
+
+    i {
+      color: #22d3ee;
+    }
+  }
+}
+
+// Achievement List
+.achievement-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0 0 1.5rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+
+  li {
+    position: relative;
+    padding-left: 1.5rem;
+    font-size: 0.95rem;
+    line-height: 1.65;
+    color: $text-secondary;
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0.65rem;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: $accent-blue;
+      box-shadow: 0 0 6px rgba(59, 130, 246, 0.6);
+    }
+
+    strong {
+      color: $text-light;
+    }
+  }
+}
+
+// Tech Stack Pill Tags
+.timeline-tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid $border-color;
+}
+
+.tech-pill-tag {
+  font-size: 0.78rem;
+  font-weight: 500;
+  padding: 0.25rem 0.65rem;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid $border-color;
+  color: $text-light;
+  transition: all 0.2s ease;
+
+  &:hover {
+    border-color: $border-light;
+    background: rgba(255, 255, 255, 0.08);
   }
 }

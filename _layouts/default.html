@@ -3,12 +3,21 @@
   {% include head.html %}
   <body>
       {% include header.html %}
-      <section id="about">
-        {% include about.html %}
-      </section>
-      <section id="projects">
-        {% include projects.html %}
-      </section>
+      {% include metrics.html %}
+      <main>
+        <section id="about" class="main-section">
+          {% include about.html %}
+        </section>
+        <section id="experience" class="main-section">
+          <div id="projects"></div> <!-- Backward compatibility anchor -->
+          {% include projects.html %}
+        </section>
+        <section id="credentials" class="main-section">
+          {% include credentials.html %}
+        </section>
         {{ content }}
+      </main>
       {% include footer.html %}
   </body>
+</html>
+

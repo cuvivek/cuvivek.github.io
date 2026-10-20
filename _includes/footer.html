@@ -1,8 +1,43 @@
 <footer class="footer">
-    <p>&copy; {{site.username}}</p>
-    <!-- <p>Build with Jekyll and <span class="love">❤</span> by <a href="https://github.com/nrandecker">Nathan Randecker</a></p> -->
+  <div class="footer-container">
+    <div class="footer-brand">
+      <h3 class="footer-logo">{{ site.username }} <span class="logo-dot">.</span></h3>
+      <p class="footer-subtitle">{{ site.user_title }} · {{ site.user_company }}</p>
+      <p class="footer-desc">Engineering high-throughput, fault-tolerant distributed systems &amp; autonomous AI performance agents.</p>
+    </div>
+
+    <div class="footer-links">
+      <div class="footer-col">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="#about" data-scroll>About &amp; Skills</a></li>
+          <li><a href="#experience" data-scroll>Work Experience</a></li>
+          <li><a href="#credentials" data-scroll>Honors &amp; Certifications</a></li>
+          <li><a href="/assets/c.u.vivek_resume.pdf" target="_blank">Download Resume</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Connect</h4>
+        <div class="footer-social-icons">
+          <a href="{{ site.linkedin_url }}" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" title="LinkedIn"><i class="fa fa-linkedin"></i></a>
+          <a href="https://github.com/{{ site.github_username }}" target="_blank" rel="noopener noreferrer" aria-label="GitHub" title="GitHub"><i class="fa fa-github-alt"></i></a>
+          <a href="mailto:{{ site.email }}" aria-label="Email" title="Email"><i class="fa fa-envelope"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>&copy; {{ 'now' | date: "%Y" }} {{ site.username }}. All rights reserved.</p>
+    <a href="#" class="back-to-top" data-scroll aria-label="Back to top">
+      <i class="fa fa-chevron-up"></i> Top
+    </a>
+  </div>
 </footer>
+
 <script src="//cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 <script src="{{ "/assets/js/sweet-scroll.min.js" | prepend: site.baseurl }}"></script>
 <script src="{{ "/assets/js/main.js" | prepend: site.baseurl }}"></script>
 {% include google-analytics.html %}
+

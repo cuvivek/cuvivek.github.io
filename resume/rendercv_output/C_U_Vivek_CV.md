@@ -15,11 +15,11 @@ Senior Performance Engineer with over 10 years of experience architecting Non-Fu
 
 Bengaluru, Karnataka, India
 
-Feb 2025 – present
+June 2021 – present
 
 
 
-1 year 9 months
+5 years 5 months
 
 - Architected and deployed an internal AI Performance Agent using **LangGraph**, Vector Databases, and Ollama/Open-Source LLMs to automate performance test execution, multi-dimensional telemetry analysis, and conversational RAG diagnostics of historical defect patterns.
 

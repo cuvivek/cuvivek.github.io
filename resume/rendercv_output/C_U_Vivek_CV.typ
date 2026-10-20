@@ -127,11 +127,11 @@ Senior Performance Engineer with over 10 years of experience architecting Non-Fu
   [
     Bengaluru, Karnataka, India
 
-    Feb 2025 – present
+    June 2021 – present
 
     
 
-    1 year 9 months
+    5 years 5 months
 
   ],
 )

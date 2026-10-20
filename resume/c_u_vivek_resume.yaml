@@ -14,7 +14,7 @@ cv:
       - company: American Express
         position: Senior Performance Engineer - Senior Engineer II
         location: Bengaluru, Karnataka, India
-        start_date: 2025-02
+        start_date: 2021-06
         end_date: present
         highlights:
           - "Architected and deployed an internal AI Performance Agent using **LangGraph**, Vector Databases, and Ollama/Open-Source LLMs to automate performance test execution, multi-dimensional telemetry analysis, and conversational RAG diagnostics of historical defect patterns."

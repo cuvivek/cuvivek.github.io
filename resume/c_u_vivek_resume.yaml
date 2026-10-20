@@ -7,8 +7,6 @@ cv:
   social_networks:
     - network: LinkedIn
       username: vivekcu
-    - network: GitHub
-      username: cuvivek
   sections:
     summary:
       - "Senior Performance Engineer with over 10 years of experience architecting Non-Functional Testing (NFT) strategies, distributed system scalability, and enterprise resiliency across Banking, Telecom, and Energy domains. Track record scaling American Express Payment Network Authorization systems to 6,000+ TPS, architecting automated chaos & resiliency validation with Toxiproxy, and engineering autonomous AI performance agents using LangGraph & RAG. Recipient of the American Express Centurion Award 2025."
@@ -21,22 +19,22 @@ cv:
         highlights:
           - "Architected and deployed an internal AI Performance Agent using **LangGraph**, Vector Databases, and Ollama/Open-Source LLMs to automate performance test execution, multi-dimensional telemetry analysis, and conversational RAG diagnostics of historical defect patterns."
           - "Spearheaded enterprise scalability and fault-tolerance initiatives for high-throughput payment authorization services."
-      - company: American Express
-        position: Senior Performance Engineer - Senior Engineer I
-        location: Bengaluru, Karnataka, India
-        start_date: 2023-03
-        end_date: 2025-02
-        highlights:
+      # - company: American Express
+      #   position: Senior Performance Engineer - Senior Engineer I
+      #   location: Bengaluru, Karnataka, India
+      #   start_date: 2023-03
+      #   end_date: 2025-02
+      #   highlights:
           - "Awarded the **Centurion Award 2025**, American Express's premier internal engineering recognition, for technical excellence and impact in system resiliency."
           - "Led performance engineering for American Express Payment Network Authorization systems, achieving horizontal scalability to **6,000 TPS** via microservices tuning, workload modeling, and thread/heap dump profiling."
           - "Containerized **Toxiproxy** to simulate network degradation, packet jitter, and latency injection; designed automated chaos engineering experiments across distributed microservices to eliminate resiliency gaps."
           - "Architected a Shift-Left Performance Testing framework integrated with **GitHub Actions**, enforcing automated throughput and latency validation gates during CI/CD to eliminate post-production defects."
-      - company: American Express
-        position: Performance Engineer - Engineer III
-        location: Bengaluru, Karnataka, India
-        start_date: 2021-06
-        end_date: 2023-03
-        highlights:
+      # - company: American Express
+      #   position: Performance Engineer - Engineer III
+      #   location: Bengaluru, Karnataka, India
+      #   start_date: 2021-06
+      #   end_date: 2023-03
+      #   highlights:
           - "Executed large-scale distributed load tests using Apache JMeter and Grafana k6 across cloud-native container platforms."
           - "Monitored and diagnosed distributed transaction traces, connection pools, and JVM garbage collection behavior using Dynatrace and JProfiler."
       - company: Amdocs India LLC
@@ -81,7 +79,7 @@ cv:
     education:
       - institution: Vellore Institute of Technology (VIT University)
         area: Civil Engineering
-        degree: Bachelor of Engineering (B.E.)
+        degree: B.Tech
         start_date: 2012-07
         end_date: 2016-06
         location: Vellore, Tamil Nadu, India
@@ -102,4 +100,4 @@ cv:
         details: "Apache Kafka, Couchbase, Python, Bash Shell Scripting, GitHub Actions, Jenkins"
 
 design:
-  theme: engineeringresumes
+  theme: classic

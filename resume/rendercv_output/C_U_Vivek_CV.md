@@ -5,26 +5,25 @@
 - Location: Bengaluru, Karnataka, India
 - Website: [cuvivek.github.io](https://cuvivek.github.io/)
 - LinkedIn: [vivekcu](https://linkedin.com/in/vivekcu)
-- GitHub: [cuvivek](https://github.com/cuvivek)
 
 
 # Summary
 Senior Performance Engineer with over 10 years of experience architecting Non-Functional Testing (NFT) strategies, distributed system scalability, and enterprise resiliency across Banking, Telecom, and Energy domains. Track record scaling American Express Payment Network Authorization systems to 6,000+ TPS, architecting automated chaos & resiliency validation with Toxiproxy, and engineering autonomous AI performance agents using LangGraph & RAG. Recipient of the American Express Centurion Award 2025.
 
 # Experience
-## **Senior Performance Engineer - Senior Engineer II**, American Express -- Bengaluru, Karnataka, India
+## **American Express**, Senior Performance Engineer - Senior Engineer II
+
+Bengaluru, Karnataka, India
 
 Feb 2025 – present
+
+
+
+1 year 9 months
 
 - Architected and deployed an internal AI Performance Agent using **LangGraph**, Vector Databases, and Ollama/Open-Source LLMs to automate performance test execution, multi-dimensional telemetry analysis, and conversational RAG diagnostics of historical defect patterns.
 
 - Spearheaded enterprise scalability and fault-tolerance initiatives for high-throughput payment authorization services.
-
-
-
-## **Senior Performance Engineer - Senior Engineer I**, American Express -- Bengaluru, Karnataka, India
-
-Mar 2023 – Feb 2025
 
 - Awarded the **Centurion Award 2025**, American Express's premier internal engineering recognition, for technical excellence and impact in system resiliency.
 
@@ -34,21 +33,21 @@ Mar 2023 – Feb 2025
 
 - Architected a Shift-Left Performance Testing framework integrated with **GitHub Actions**, enforcing automated throughput and latency validation gates during CI/CD to eliminate post-production defects.
 
-
-
-## **Performance Engineer - Engineer III**, American Express -- Bengaluru, Karnataka, India
-
-June 2021 – Mar 2023
-
 - Executed large-scale distributed load tests using Apache JMeter and Grafana k6 across cloud-native container platforms.
 
 - Monitored and diagnosed distributed transaction traces, connection pools, and JVM garbage collection behavior using Dynatrace and JProfiler.
 
 
 
-## **Performance Engineer (Amdocs Core R&D Division)**, Amdocs India LLC -- Pune, Maharashtra, India
+## **Amdocs India LLC**, Performance Engineer (Amdocs Core R&D Division)
+
+Pune, Maharashtra, India
 
 Nov 2019 – June 2021
+
+
+
+1 year 8 months
 
 - Certified monthly drop releases for microservices-based digital applications on **Red Hat OpenShift (Kubernetes)** and **AWS EKS** environments.
 
@@ -60,9 +59,15 @@ Nov 2019 – June 2021
 
 
 
-## **Performance Engineer**, Petrolink Data Services Pvt. Ltd. -- Pune, Maharashtra, India
+## **Petrolink Data Services Pvt. Ltd.**, Performance Engineer
+
+Pune, Maharashtra, India
 
 July 2019 – Oct 2019
+
+
+
+4 months
 
 - Formulated Non-Functional Requirements (NFRs) and authored comprehensive Performance Test Plans.
 
@@ -70,9 +75,15 @@ July 2019 – Oct 2019
 
 
 
-## **Application Development Analyst**, Accenture Solutions Pvt. Ltd. -- Pune, Maharashtra, India
+## **Accenture Solutions Pvt. Ltd.**, Application Development Analyst
+
+Pune, Maharashtra, India
 
 Dec 2016 – July 2019
+
+
+
+2 years 8 months
 
 - Developed performance test scripts using HP / Micro Focus LoadRunner across Web (HTTP/HTML) and Web Services protocols.
 
@@ -113,7 +124,14 @@ Dec 2016 – July 2019
 
 
 # Education
-## **Vellore Institute of Technology (VIT University)**, Bachelor of Engineering (B.E.) in Civil Engineering -- Vellore, Tamil Nadu, India
+## **Vellore Institute of Technology (VIT University)**, Civil Engineering
+
+**B.Tech**
+
+
+Vellore, Tamil Nadu, India
+
+
 July 2012 – June 2016
 
 - Graduated with CGPA: 8.86 / 10

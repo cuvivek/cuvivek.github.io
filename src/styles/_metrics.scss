@@ -1,11 +1,12 @@
 // Metrics Counter Bar
 .metrics-section {
-  background: $bg-secondary;
-  border-top: 1px solid $border-color;
-  border-bottom: 1px solid $border-color;
+  background: var(--bg-secondary);
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
   padding: 3.5rem 0;
   position: relative;
   z-index: 5;
+  transition: background 0.3s ease, border-color 0.3s ease;
 }
 
 .metrics-container {
@@ -26,11 +27,12 @@
 }
 
 .metric-card {
-  background: $bg-card;
-  border: 1px solid $border-color;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
   border-radius: 12px;
   padding: 1.75rem 1.5rem;
-  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+  box-shadow: var(--card-shadow);
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease, background 0.3s ease;
   position: relative;
   overflow: hidden;
 
@@ -47,8 +49,8 @@
 
   &:hover {
     transform: translateY(-4px);
-    border-color: $border-light;
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+    border-color: var(--border-light);
+    box-shadow: var(--card-shadow-hover);
 
     &::before {
       background: linear-gradient(90deg, $accent-blue, $accent-cyan);
@@ -67,27 +69,27 @@
   margin-bottom: 1rem;
 
   &.metric-blue {
-    background: rgba(59, 130, 246, 0.12);
-    border: 1px solid rgba(59, 130, 246, 0.25);
-    color: #60a5fa;
+    background: rgba(37, 99, 235, 0.12);
+    border: 1px solid rgba(37, 99, 235, 0.25);
+    color: $accent-blue;
   }
 
   &.metric-cyan {
-    background: rgba(6, 182, 212, 0.12);
-    border: 1px solid rgba(6, 182, 212, 0.25);
-    color: #22d3ee;
+    background: rgba(8, 145, 178, 0.12);
+    border: 1px solid rgba(8, 145, 178, 0.25);
+    color: $accent-cyan;
   }
 
   &.metric-gold {
-    background: rgba(245, 158, 11, 0.12);
-    border: 1px solid rgba(245, 158, 11, 0.25);
-    color: #fbbf24;
+    background: rgba(217, 119, 6, 0.12);
+    border: 1px solid rgba(217, 119, 6, 0.25);
+    color: $accent-gold;
   }
 
   &.metric-emerald {
-    background: rgba(16, 185, 129, 0.12);
-    border: 1px solid rgba(16, 185, 129, 0.25);
-    color: #34d399;
+    background: rgba(5, 150, 105, 0.12);
+    border: 1px solid rgba(5, 150, 105, 0.25);
+    color: $accent-emerald;
   }
 }
 
@@ -114,7 +116,7 @@
 }
 
 .metric-desc {
-  font-size: 0.85rem;
+  font-size: 0.88rem;
   color: $text-muted;
   line-height: 1.5;
   margin: 0;

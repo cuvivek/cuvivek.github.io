@@ -2,7 +2,20 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
-  <meta name="theme-color" content="#0b0f19">
+  <meta name="theme-color" content="#0b0f19" id="theme-color-meta">
+
+  <!-- Instant Theme Initializer (prevents flash of wrong theme) -->
+  <script>
+    (function() {
+      try {
+        var stored = localStorage.getItem('portfolio-theme');
+        var theme = stored ? stored : (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+        document.documentElement.setAttribute('data-theme', theme);
+        var meta = document.getElementById('theme-color-meta');
+        if (meta) meta.setAttribute('content', theme === 'light' ? '#f8fafc' : '#0b0f19');
+      } catch(e) {}
+    })();
+  </script>
 
   <title>{{ site.title }}</title>
   <meta name="description" content="{{ site.description }}">
@@ -15,13 +28,13 @@
   <meta property="og:description" content="Performance Engineer with 10+ years scaling distributed systems to 6,000 TPS, building AI agents with LangGraph & driving chaos engineering.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="{{ site.url }}/">
-  <meta property="og:image" content="{{ site.url }}/assets/img/vivek_pic_circle.png">
+  <meta property="og:image" content="{{ site.url }}/assets/img/vivek_portfolio_pic.JPG">
 
   <!-- Twitter Meta Tags -->
-  <meta name="twitter:card" content="summary">
+  <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="{{ site.username }} | Senior Performance Engineer">
   <meta name="twitter:description" content="Performance Engineer with 10+ years scaling distributed systems to 6,000 TPS, building AI agents with LangGraph & driving chaos engineering.">
-  <meta name="twitter:image" content="{{ site.url }}/assets/img/vivek_pic_circle.png">
+  <meta name="twitter:image" content="{{ site.url }}/assets/img/vivek_portfolio_pic.JPG">
 
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><linearGradient id='g' x1='0%' y1='0%' x2='100%' y2='100%'><stop offset='0%' stop-color='%2338bdf8'/><stop offset='100%' stop-color='%236366f1'/></linearGradient></defs><rect width='100' height='100' rx='24' fill='%230f172a'/><path d='M55 18 L28 54 L48 54 L42 82 L72 46 L52 46 Z' fill='url(%23g)'/></svg>">

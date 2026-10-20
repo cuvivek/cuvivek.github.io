@@ -5,19 +5,20 @@
 html {
   scroll-behavior: smooth;
   font-size: 16px;
-  background-color: $bg-main;
+  background-color: var(--bg-main);
 }
 
 body {
   margin: 0;
   padding: 0;
-  background-color: $bg-main;
+  background-color: var(--bg-main);
   color: $text-secondary;
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
   line-height: 1.65;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -43,7 +44,7 @@ a {
   text-decoration: none;
   transition: all 0.25s ease;
   &:hover {
-    color: lighten($accent-blue, 12%);
+    color: lighten($accent-blue, 10%);
   }
 }
 
@@ -62,7 +63,7 @@ img {
 main {
   position: relative;
   z-index: 2;
-  background-color: $bg-main;
+  background-color: var(--bg-main);
 }
 
 .main-section {
@@ -87,8 +88,8 @@ main {
   text-transform: uppercase;
   letter-spacing: 0.12em;
   color: $accent-cyan;
-  background: rgba(6, 182, 212, 0.1);
-  border: 1px solid rgba(6, 182, 212, 0.25);
+  background: rgba(8, 145, 178, 0.1);
+  border: 1px solid rgba(8, 145, 178, 0.25);
   padding: 0.35rem 0.85rem;
   border-radius: 9999px;
   margin-bottom: 0.75rem;
@@ -137,11 +138,11 @@ main {
   }
 
   &.btn-primary {
-    background: linear-gradient(135deg, $accent-blue 0%, #2563eb 100%);
+    background: linear-gradient(135deg, $accent-blue 0%, #1d4ed8 100%);
     color: #ffffff;
     box-shadow: 0 4px 15px rgba(37, 99, 235, 0.3);
     &:hover {
-      background: linear-gradient(135deg, lighten($accent-blue, 5%) 0%, $accent-blue 100%);
+      background: linear-gradient(135deg, lighten($accent-blue, 4%) 0%, $accent-blue 100%);
       box-shadow: 0 6px 20px rgba(37, 99, 235, 0.45);
       transform: translateY(-2px);
       color: #ffffff;
@@ -149,26 +150,27 @@ main {
   }
 
   &.btn-secondary {
-    background: rgba(255, 255, 255, 0.05);
-    color: $text-primary;
-    border: 1px solid $border-light;
+    background: var(--btn-sec-bg);
+    color: var(--btn-sec-text);
+    border: 1px solid var(--btn-sec-border);
     backdrop-filter: blur(8px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
     &:hover {
-      background: rgba(255, 255, 255, 0.1);
-      border-color: rgba(255, 255, 255, 0.25);
-      color: #ffffff;
+      background: rgba(37, 99, 235, 0.1);
+      border-color: $accent-blue;
+      color: $accent-blue;
       transform: translateY(-2px);
     }
   }
 
   &.btn-tertiary {
-    background: rgba(6, 182, 212, 0.1);
-    color: #67e8f9;
-    border: 1px solid rgba(6, 182, 212, 0.3);
+    background: rgba(8, 145, 178, 0.1);
+    color: $accent-cyan;
+    border: 1px solid rgba(8, 145, 178, 0.3);
     &:hover {
-      background: rgba(6, 182, 212, 0.2);
-      border-color: rgba(6, 182, 212, 0.5);
-      color: #ffffff;
+      background: rgba(8, 145, 178, 0.2);
+      border-color: rgba(8, 145, 178, 0.5);
+      color: $accent-cyan;
       transform: translateY(-2px);
     }
   }

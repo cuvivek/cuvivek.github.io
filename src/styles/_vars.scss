@@ -1,28 +1,99 @@
-// Modern Tech Palette & Design Tokens
-$bg-main: #090d16;
-$bg-secondary: #0d1322;
-$bg-card: #111827;
-$bg-card-hover: #172238;
-$bg-card-alt: #162032;
+// CSS Variables for Dark & Light Themes
+:root {
+  --bg-main: #090d16;
+  --bg-secondary: #0d1322;
+  --bg-card: #111827;
+  --bg-card-hover: #172238;
+  --bg-card-alt: #162032;
 
-$border-color: rgba(255, 255, 255, 0.08);
-$border-light: rgba(255, 255, 255, 0.14);
-$border-accent: rgba(59, 130, 246, 0.35);
+  --border-color: rgba(255, 255, 255, 0.08);
+  --border-light: rgba(255, 255, 255, 0.16);
+  --border-accent: rgba(59, 130, 246, 0.35);
 
-$text-primary: #f8fafc;
-$text-secondary: #94a3b8;
-$text-muted: #64748b;
-$text-light: #e2e8f0;
+  --text-primary: #f8fafc;
+  --text-secondary: #94a3b8;
+  --text-muted: #64748b;
+  --text-light: #e2e8f0;
+
+  --card-shadow: 0 8px 30px rgba(0, 0, 0, 0.28);
+  --card-shadow-hover: 0 12px 35px rgba(0, 0, 0, 0.42);
+  --hero-radial: radial-gradient(circle at 50% 20%, #131b2e 0%, #090d16 80%);
+  --hero-title-gradient: linear-gradient(180deg, #ffffff 30%, #cbd5e1 100%);
+  --tag-bg: rgba(255, 255, 255, 0.04);
+  --tag-border: rgba(255, 255, 255, 0.08);
+  --tag-text: #e2e8f0;
+  --btn-sec-bg: rgba(255, 255, 255, 0.05);
+  --btn-sec-border: rgba(255, 255, 255, 0.14);
+  --btn-sec-text: #f8fafc;
+  --footer-bg: #060911;
+  --footer-bottom-border: rgba(255, 255, 255, 0.05);
+  --award-bg: linear-gradient(135deg, rgba(245, 158, 11, 0.12) 0%, rgba(17, 24, 39, 0.95) 100%);
+  --logo-box-bg: #ffffff;
+  --logo-box-border: rgba(255, 255, 255, 0.1);
+  --theme-btn-bg: rgba(255, 255, 255, 0.08);
+  --theme-btn-color: #fbbf24;
+}
+
+[data-theme="light"] {
+  --bg-main: #f8fafc;
+  --bg-secondary: #f1f5f9;
+  --bg-card: #ffffff;
+  --bg-card-hover: #f8fafc;
+  --bg-card-alt: #f1f5f9;
+
+  --border-color: rgba(15, 23, 42, 0.09);
+  --border-light: rgba(15, 23, 42, 0.16);
+  --border-accent: rgba(37, 99, 235, 0.35);
+
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
+  --text-muted: #64748b;
+  --text-light: #1e293b;
+
+  --card-shadow: 0 6px 20px rgba(15, 23, 42, 0.06);
+  --card-shadow-hover: 0 12px 30px rgba(15, 23, 42, 0.12);
+  --hero-radial: radial-gradient(circle at 50% 15%, #e0f2fe 0%, #f8fafc 80%);
+  --hero-title-gradient: linear-gradient(180deg, #0f172a 30%, #334155 100%);
+  --tag-bg: #f1f5f9;
+  --tag-border: rgba(15, 23, 42, 0.1);
+  --tag-text: #334155;
+  --btn-sec-bg: #ffffff;
+  --btn-sec-border: #cbd5e1;
+  --btn-sec-text: #0f172a;
+  --footer-bg: #0f172a;
+  --footer-bottom-border: rgba(255, 255, 255, 0.1);
+  --award-bg: linear-gradient(135deg, rgba(245, 158, 11, 0.1) 0%, rgba(255, 251, 235, 0.95) 100%);
+  --logo-box-bg: #f8fafc;
+  --logo-box-border: rgba(15, 23, 42, 0.12);
+  --theme-btn-bg: #e2e8f0;
+  --theme-btn-color: #3b82f6;
+}
+
+// Design Token mappings to CSS Variables
+$bg-main: var(--bg-main);
+$bg-secondary: var(--bg-secondary);
+$bg-card: var(--bg-card);
+$bg-card-hover: var(--bg-card-hover);
+$bg-card-alt: var(--bg-card-alt);
+
+$border-color: var(--border-color);
+$border-light: var(--border-light);
+$border-accent: var(--border-accent);
+
+$text-primary: var(--text-primary);
+$text-secondary: var(--text-secondary);
+$text-muted: var(--text-muted);
+$text-light: var(--text-light);
 
 // Accents
-$accent-blue: #3b82f6;
-$accent-blue-hover: #2563eb;
-$accent-cyan: #06b6d4;
-$accent-gold: #f59e0b;
-$accent-emerald: #10b981;
-$accent-purple: #8b5cf6;
+$accent-blue: #2563eb;
+$accent-blue-hover: #1d4ed8;
+$accent-cyan: #0891b2;
+$accent-gold: #d97706;
+$accent-emerald: #059669;
+$accent-purple: #7c3aed;
 
-// Legacy aliases for backward compatibility
+// Legacy variables for backward compatibility
 $main: $bg-main;
 $sec: $text-secondary;
 $purple: $accent-purple;

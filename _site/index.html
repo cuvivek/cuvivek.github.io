@@ -4,7 +4,20 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
-  <meta name="theme-color" content="#0b0f19">
+  <meta name="theme-color" content="#0b0f19" id="theme-color-meta">
+
+  <!-- Instant Theme Initializer (prevents flash of wrong theme) -->
+  <script>
+    (function() {
+      try {
+        var stored = localStorage.getItem('portfolio-theme');
+        var theme = stored ? stored : (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+        document.documentElement.setAttribute('data-theme', theme);
+        var meta = document.getElementById('theme-color-meta');
+        if (meta) meta.setAttribute('content', theme === 'light' ? '#f8fafc' : '#0b0f19');
+      } catch(e) {}
+    })();
+  </script>
 
   <title>C U Vivek | Senior Performance Engineer</title>
   <meta name="description" content="Senior Performance Engineer with over 10 years of experience in Banking, Telecom, and Petroleum domains. Specializing in high-throughput distributed systems (6,000 TPS), Chaos Engineering, and AI Performance Agents using LangGraph.">
@@ -17,13 +30,13 @@
   <meta property="og:description" content="Performance Engineer with 10+ years scaling distributed systems to 6,000 TPS, building AI agents with LangGraph & driving chaos engineering.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://cuvivek.github.io/">
-  <meta property="og:image" content="https://cuvivek.github.io/assets/img/vivek_pic_circle.png">
+  <meta property="og:image" content="https://cuvivek.github.io/assets/img/vivek_portfolio_pic.JPG">
 
   <!-- Twitter Meta Tags -->
-  <meta name="twitter:card" content="summary">
+  <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="C U Vivek | Senior Performance Engineer">
   <meta name="twitter:description" content="Performance Engineer with 10+ years scaling distributed systems to 6,000 TPS, building AI agents with LangGraph & driving chaos engineering.">
-  <meta name="twitter:image" content="https://cuvivek.github.io/assets/img/vivek_pic_circle.png">
+  <meta name="twitter:image" content="https://cuvivek.github.io/assets/img/vivek_portfolio_pic.JPG">
 
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><linearGradient id='g' x1='0%' y1='0%' x2='100%' y2='100%'><stop offset='0%' stop-color='%2338bdf8'/><stop offset='100%' stop-color='%236366f1'/></linearGradient></defs><rect width='100' height='100' rx='24' fill='%230f172a'/><path d='M55 18 L28 54 L48 54 L42 82 L72 46 L52 46 Z' fill='url(%23g)'/></svg>">
@@ -69,19 +82,16 @@
         <a class="nav-link" href="#experience" data-scroll>Experience</a>
         <a class="nav-link" href="#credentials" data-scroll>Honors & Certs</a>
         <a class="nav-link nav-btn" href="/assets/c.u.vivek_resume.pdf" target="_blank"><i class="fa fa-file-pdf-o"></i> Resume</a>
+        <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle light/dark theme" title="Toggle theme">
+          <i class="fa fa-moon-o" id="theme-icon"></i>
+        </button>
       </div>
     </div>
   </nav>
 
   <div class="header">
-    <div class="hero-badge-container">
-      <span class="hero-award-badge">
-        <i class="fa fa-trophy award-icon"></i> Centurion Award Winner 2025 · American Express
-      </span>
-    </div>
-
     <div class="avatar-wrapper">
-      <img alt="C U Vivek" src="/assets/img/vivek_pic_circle.png" class="hero-avatar" />
+      <img alt="C U Vivek" src="/assets/img/vivek_portfolio_pic.JPG" class="hero-avatar" />
       <span class="status-indicator" title="Senior Performance Engineer @ Amex"></span>
     </div>
 

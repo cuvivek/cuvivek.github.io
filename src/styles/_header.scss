@@ -1,5 +1,5 @@
 #particles-js {
-  background: radial-gradient(circle at 50% 20%, #131b2e 0%, #090d16 80%);
+  background: var(--hero-radial);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -7,6 +7,7 @@
   min-height: 100vh;
   position: relative;
   overflow: hidden;
+  transition: background 0.3s ease;
 
   .particles-js-canvas-el {
     position: absolute;
@@ -15,6 +16,7 @@
     width: 100% !important;
     height: 100% !important;
     z-index: 1;
+    pointer-events: auto;
   }
 }
 
@@ -25,7 +27,7 @@
   left: 0;
   width: 100%;
   z-index: 20;
-  padding: 1.5rem 1.5rem;
+  padding: 1.25rem 1.25rem;
 
   @media (min-width: $tablet) {
     padding: 1.75rem 3rem;
@@ -52,14 +54,14 @@
   }
 
   &:hover {
-    color: #ffffff;
+    color: $accent-blue;
   }
 }
 
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 1.25rem;
+  gap: 1.15rem;
 
   @media (max-width: 680px) {
     .nav-link:not(.nav-btn) {
@@ -79,20 +81,48 @@
   }
 
   &.nav-btn {
-    background: rgba(255, 255, 255, 0.06);
-    border: 1px solid $border-light;
+    background: var(--btn-sec-bg);
+    border: 1px solid var(--btn-sec-border);
     padding: 0.45rem 1rem;
     border-radius: 6px;
-    color: $text-primary;
+    color: var(--btn-sec-text);
     display: inline-flex;
     align-items: center;
     gap: 0.4rem;
+    font-weight: 600;
 
     &:hover {
-      background: rgba(59, 130, 246, 0.2);
+      background: rgba(37, 99, 235, 0.15);
       border-color: $accent-blue;
-      color: #ffffff;
+      color: $accent-blue;
     }
+  }
+}
+
+// Theme Toggle Button
+.theme-toggle-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--theme-btn-bg);
+  border: 1px solid var(--border-light);
+  color: var(--theme-btn-color);
+  cursor: pointer;
+  font-size: 1.15rem;
+  transition: all 0.25s ease;
+  padding: 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+
+  &:hover {
+    transform: scale(1.1) rotate(15deg);
+    border-color: $accent-blue;
+  }
+
+  &:focus {
+    outline: none;
   }
 }
 
@@ -102,71 +132,48 @@
   z-index: 10;
   text-align: center;
   max-width: 860px;
-  padding: 6rem 1.5rem 4rem;
+  padding: 6.5rem 1.5rem 4rem;
   margin: 0 auto;
 }
 
-// Award Chip
-.hero-badge-container {
-  margin-bottom: 1.5rem;
-}
-
-.hero-award-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0.4rem 1.1rem;
-  background: rgba(245, 158, 11, 0.12);
-  border: 1px solid rgba(245, 158, 11, 0.35);
-  border-radius: 9999px;
-  font-size: 0.85rem;
-  font-weight: 600;
-  color: #fbbf24;
-  letter-spacing: 0.02em;
-  box-shadow: 0 0 20px rgba(245, 158, 11, 0.15);
-
-  .award-icon {
-    color: #f59e0b;
-  }
-}
-
-// Avatar
+// Avatar (Enlarged)
 .avatar-wrapper {
   position: relative;
   display: inline-block;
-  margin-bottom: 1.25rem;
+  margin-bottom: 1.5rem;
 }
 
 .hero-avatar {
-  width: 124px;
-  height: 124px;
+  width: 170px;
+  height: 170px;
   border-radius: 50%;
   object-fit: cover;
-  border: 3px solid rgba(59, 130, 246, 0.6);
-  box-shadow: 0 0 35px rgba(59, 130, 246, 0.35), 0 0 0 6px rgba(59, 130, 246, 0.1);
+  object-position: center 38%;
+  border: 4px solid rgba(59, 130, 246, 0.7);
+  box-shadow: 0 0 40px rgba(59, 130, 246, 0.35), 0 0 0 8px rgba(59, 130, 246, 0.12);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 
   &:hover {
     transform: scale(1.04);
-    box-shadow: 0 0 45px rgba(59, 130, 246, 0.5), 0 0 0 8px rgba(59, 130, 246, 0.15);
+    box-shadow: 0 0 50px rgba(59, 130, 246, 0.5), 0 0 0 10px rgba(59, 130, 246, 0.2);
   }
 
   @media (min-width: $tablet) {
-    width: 140px;
-    height: 140px;
+    width: 210px;
+    height: 210px;
   }
 }
 
 .status-indicator {
   position: absolute;
-  bottom: 8px;
-  right: 8px;
-  width: 18px;
-  height: 18px;
+  bottom: 12px;
+  right: 12px;
+  width: 22px;
+  height: 22px;
   background-color: #10b981;
-  border: 3px solid $bg-main;
+  border: 3px solid var(--bg-main);
   border-radius: 50%;
-  box-shadow: 0 0 10px #10b981;
+  box-shadow: 0 0 12px #10b981;
 }
 
 // Hero Typography
@@ -176,17 +183,17 @@
 
 .site-title {
   display: block;
-  font-size: 2.75rem;
+  font-size: 2.85rem;
   font-weight: 800;
   letter-spacing: -0.03em;
   line-height: 1.1;
-  color: #ffffff;
-  background: linear-gradient(180deg, #ffffff 30%, #cbd5e1 100%);
+  color: $text-primary;
+  background: var(--hero-title-gradient);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 
   @media (min-width: $tablet) {
-    font-size: 4rem;
+    font-size: 4.25rem;
   }
 }
 
@@ -199,11 +206,11 @@
   letter-spacing: -0.01em;
 
   @media (min-width: $tablet) {
-    font-size: 1.5rem;
+    font-size: 1.55rem;
   }
 
   .highlight-company {
-    color: #38bdf8;
+    color: $accent-blue;
   }
 }
 
@@ -219,12 +226,12 @@
   }
 
   .stat-highlight {
-    color: #38bdf8;
+    color: $accent-blue;
     font-weight: 700;
   }
 
   .ai-highlight {
-    color: #22d3ee;
+    color: $accent-cyan;
     font-weight: 700;
   }
 }
@@ -249,11 +256,11 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 42px;
-    height: 42px;
+    width: 44px;
+    height: 44px;
     border-radius: 50%;
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid $border-light;
+    background: var(--btn-sec-bg);
+    border: 1px solid var(--border-light);
     color: $text-light;
     font-size: 1.15rem;
     transition: all 0.25s ease;
@@ -263,7 +270,7 @@
       border-color: $accent-blue;
       color: #ffffff;
       transform: translateY(-3px);
-      box-shadow: 0 4px 15px rgba(59, 130, 246, 0.4);
+      box-shadow: 0 4px 15px rgba(37, 99, 235, 0.4);
     }
   }
 }
@@ -285,7 +292,7 @@
   }
 
   &:hover {
-    color: $text-primary;
+    color: $accent-blue;
   }
 }
 
